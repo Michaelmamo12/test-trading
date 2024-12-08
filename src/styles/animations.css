@@ -1,0 +1,49 @@
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(120, 120, 255, 0.5),
+                0 0 40px rgba(120, 120, 255, 0.3),
+                0 0 60px rgba(120, 120, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(120, 120, 255, 0.7),
+                0 0 60px rgba(120, 120, 255, 0.5),
+                0 0 90px rgba(120, 120, 255, 0.3);
+  }
+}
+
+@keyframes holographicShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.neon-glow {
+  animation: neonPulse 2s infinite;
+}
+
+.holographic {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(120, 120, 255, 0.2)
+  );
+  background-size: 200% 200%;
+  animation: holographicShimmer 3s ease infinite;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.time-warp {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.time-warp:hover {
+  transform: perspective(1000px) translateZ(50px);
+  filter: brightness(1.2);
+}
